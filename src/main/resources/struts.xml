@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+ 	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="struts-default, json-default">
+        <global-results>
+            <result name="json" type="json">
+                <param name="encoding">UTF-8</param>
+                <param name="excludeNullProperties">true</param>
+                <param name="root">customerList</param>
+            </result>
+        </global-results>
+
+        <action name="addCustomerAction"
+			class="com.mkyong.customer.action.CustomerAction" method="addCustomer" >
+		    <result name="success">/WEB-INF/pages/customer.jsp</result>
+		</action>
+	
+		<action name="listCustomerAction"
+			class="com.mkyong.customer.action.CustomerAction" method="listCustomer" >
+		    <result name="success">/WEB-INF/pages/customer.jsp</result>
+		</action>
+
+        <action name="getJSONResult"
+                method="listCustomerJSON"
+                class="com.mkyong.customer.action.CustomerAction">
+        </action>
+
+	</package>
+	
+</struts>
