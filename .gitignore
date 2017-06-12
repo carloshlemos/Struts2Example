@@ -13,8 +13,7 @@ local.properties
 
 # IDEs and editors
 
-/.idea
-
+.idea/
 .project
 
 .classpath
