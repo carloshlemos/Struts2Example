@@ -11,6 +11,22 @@ local.properties
 .loadpath
 .recommenders
 
+# IDEs and editors
+
+/.idea
+
+.project
+
+.classpath
+
+.c9/
+
+*.launch
+
+.settings/
+
+*.sublime-workspace
+
 # External tool builders
 .externalToolBuilders/
 
